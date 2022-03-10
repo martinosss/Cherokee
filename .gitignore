@@ -1,0 +1,7 @@
+cmake-build-debug
+.idea
+*.o
+a.out
+.DS_Store
+.vscode
+cherokee

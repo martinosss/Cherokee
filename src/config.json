@@ -1,0 +1,96 @@
+{
+  "contentTypes": [
+    {
+      "extension": "default",
+      "mimeType": "text/plain"
+    },
+    {
+      "extension": "mp3",
+      "mimeType": "audio/mp3"
+    },
+    {
+      "extension": "json",
+      "mimeType": "application/json"
+    },
+    {
+      "extension": "htm",
+      "mimeType": "text/html"
+    },
+    {
+      "extension": "html",
+      "mimeType": "text/html"
+    },
+    {
+      "extension": "jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "extension": "jpeg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "extension": "txt",
+      "mimeType": "text/plain"
+    },
+    {
+      "extension": "png",
+      "mimeType": "image/png"
+    }
+  ],
+  "request": {
+    "timeout": 1
+  },
+  "thread": {
+    "max": 50
+  },
+  "port": 8080,
+  "errorFile": {
+    "path": "../logs/error.log"
+  },
+  "logFile": {
+    "path": "../logs/log.log"
+  },
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/config",
+      "handler": "./../src/config.json",
+      "cache": 10
+    },
+    {
+      "method": "GET",
+      "path": "/carre",
+      "handler": "./../src/assets/carre.html"
+    },
+    {
+      "method": "GET",
+      "path": "/lama",
+      "handler": "./../src/assets/lama.jpeg"
+    },
+    {
+      "method": "GET",
+      "path": "/src",
+      "handler": "./../src"
+    },
+    {
+      "method": "GET",
+      "path": "/d",
+      "handler": "./../src/assets/d.png"
+    },
+    {
+      "method": "GET",
+      "path": "/audio",
+      "handler": "./../src/assets/chat.mp3"
+    },
+    {
+      "method": "GET",
+      "path": "/lama2",
+      "handler": "@get_lama"
+    },
+    {
+      "method": "POST",
+      "path": "/lama2",
+      "handler": "@post_lama"
+    }
+  ]
+}
